@@ -7,12 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/oppaii230205/demo_ci_main'
-            }
-        }
-
         stage('Setup Python') {
             steps {
                 sh '''
