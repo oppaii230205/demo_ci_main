@@ -36,7 +36,6 @@ pipeline {
 
         stage('Lint with Ruff') {
             steps {
-                // Giống continue-on-error của GitHub Actions
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     sh '''
                     . venv/bin/activate
